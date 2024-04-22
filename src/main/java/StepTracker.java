@@ -11,13 +11,13 @@ public StepTracker(int goal){
 public void addDailySteps(int dailySteps){
  totalDays++;
  totalSteps = totalSteps + dailySteps;
- if(steps >= minSteps)
+ if(dailySteps >= minSteps)
   actDays++;
 }
 public int activeDays(){
  return actDays;
 }
-public int averageSteps(){
+public double averageSteps(){
  if(totalSteps == 0 || totalDays == 0)
   return 0.0;
  else
